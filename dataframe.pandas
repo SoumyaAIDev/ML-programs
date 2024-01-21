@@ -1,0 +1,19 @@
+ # creating a dataframe using pandas
+import pandas as pd
+import numpy as np
+df = pd.read_csv("tem.csv")
+df
+
+df.shape
+
+df.dtypes
+df.head()
+df.tail()
+df.isnull()
+df.isnull().sum()
+df.count()
+df.info()
+
+gk=df.groupby()
+gk=gk.get_group()
+gk
