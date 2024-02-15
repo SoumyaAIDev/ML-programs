@@ -1,0 +1,46 @@
+#preprocessing and testing ,training data
+country	age	salary	puchased
+France	NaN	 7200	  NO
+Spain	27.0	 4800	  yes
+Germany	30.0 5400	   yes
+UK	49.0	  98000	    NO
+
+
+#importing the libraries
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+df=pd.read_csv("data.csv")
+df.head()
+
+#it will take data from last
+df.tail()
+#it will give details about information
+df.info()
+#it will describe the data
+df.describe()
+
+#it show the null values
+df.isnull().sum()
+
+df["age"].fillna(df["age"].mean(),inplace=True)
+df["salary"].fillna(df["salary"].mean(),inplace=True)
+
+#importing  sklearn library
+from sklearn.impute import SimpleImputer
+x=df.iloc[:,:-1].values
+x
+
+y=df.iloc[:,3:].values
+y
+#preprocessind data
+from sklearn.preprocessing import LabelEncoder
+le=LabelEncoder()
+h=le.fit_transform(x[:,0])
+h
+
+y=le.fit_transform(y)
+y
+     
+     
