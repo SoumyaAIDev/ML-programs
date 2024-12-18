@@ -1,0 +1,14 @@
+my_project/
+├── data/                     
+│   ├── raw/                  
+│   ├── processed/            
+│   └── examples/             
+├── src/                      
+│   ├── __init__.py           
+│   ├── main.py               
+│   ├── preprocess.py         
+│   ├── model_training.py     
+│   ├── utils.py              
+├── models/                   
+├── notebooks/                
+├── tests/                    

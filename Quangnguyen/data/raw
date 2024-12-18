@@ -1,0 +1,10 @@
+from datasets import load_dataset
+
+def load_solidity_dataset():
+    dataset = load_dataset("Quangnguyen711/solidity_re_entrancy_dataset")
+    print("Dataset Structure:", dataset)
+    print("Sample Entry:", dataset["train"][0])
+    return dataset
+
+if __name__ == "__main__":
+    load_solidity_dataset()
